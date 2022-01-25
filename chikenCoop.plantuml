@@ -1,0 +1,36 @@
+@startuml
+class Gallinero{
+-largo float
+-ancho float
+-profundo float
++abrirGallinero()
++cerrarGallinero()
+}
+class Gallina{
+-raza string
+-tamagno string
+-hembraOmacho boolean
++comer(food:food)
++caminar(direction: coordinates)
++cacarear(time:seconds)
++dormir(time:seconds)
+}
+class Pico{
+-color string
+-tamagno string
++abrir()
++cerrar()
+}
+class Plumas{
+-color string
+-tamgno string
+}
+class Alas{
+-tamagno string
++aletear()
+}
+Gallinero "1" o-- "0..*" Gallinas
+Gallinas *-- "0..*" Plumas
+Gallinas *-- "0..*" Alas
+Gallinas *-- "1" Pico
+@enduml
