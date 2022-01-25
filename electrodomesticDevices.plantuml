@@ -1,0 +1,46 @@
+@startuml
+class Electrodomestico{
+-dimensiones string
+-color string
+-material string
+-marca string
++encender()
++apagar()
+}
+class Plancha extends Electrodomestico{
+-encendido boolean
+-temperatura float
+-nivelDeAgua float
++planchar()
++agregarAgua()
++modificarTemperatura(temperatura:temperatura)
+}
+
+class Minicomponente extends Electrodomestico{
+-volumen float
+-potencia float
+-rangoFrecuencia float
++subirVolumen(volumen:volumen)
++bajarVolumen(volumen:volumen)
++reproducir(cancion:cancion)
++pausar(cancion:cansion)
+}
+class TV extends Electrodomestico{
+-resolucion string
+-canal int
+-volumen float
++cambiarCanal(canal:int)
++modificarVolumen(volumen: float)
+}
+class BlackNWhiteTV extends TV{
+-canaleDisponibles int
+-radiofrecuencia float
+}
+class ColorTV extends TV{
+-tipoDePantalla string
+-smartTv boolean
+-disegno string
++iniciarAsistenteVirtual()
++conectarWifi()
+}
+@enduml
