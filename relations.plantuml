@@ -17,24 +17,30 @@ class Techo{
 -altura float
 -area float
 -color string
++obtenerDimensiones()
++obtenerColor()
 }
 class Departamento{
 -tamagno string
 -habitaciones int
 -color string
 +hosepdar(user:user)
-+dejar
++dejarDeHospedar(user:user)
 }
 class Ventana{
+-estadoAbiertoCerrado boolean
 -disegno string
 -dimensiones string
 -color string
 -material string
++abrir()
++cerrar()
 }
 
 Edificio "1" o-- "1..*" Departamento
 Departamento  "1"*--> "1..*"Puerta
 Departamento "1"*--> "1..*" Techo
 Departamento "1"*--> "0..*" Ventana
+
 
 @enduml
