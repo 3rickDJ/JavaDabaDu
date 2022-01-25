@@ -29,8 +29,8 @@ class Alas{
 -tamagno string
 +aletear()
 }
-Gallinero "1" o-- "0..*" Gallinas
-Gallinas *-- "0..*" Plumas
-Gallinas *-- "0..*" Alas
-Gallinas *-- "1" Pico
+Gallinero "1" o-- "0..*" Gallina
+Gallina *-- "0..*" Plumas
+Gallina *-- "0..*" Alas
+Gallina *-- "1" Pico
 @enduml
