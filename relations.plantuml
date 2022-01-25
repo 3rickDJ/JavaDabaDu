@@ -1,0 +1,40 @@
+@startuml
+class Edificio{
+-numeroDeDepartamentos int
+-dimensiones string
+-color string
+-disegno string
++hospedar() boolean
+}
+class Puerta{
+-material string
+-dimension string
+-color string
++abrir()
++cerrar()
+}
+class Techo{
+-altura float
+-area float
+-color string
+}
+class Departamento{
+-tamagno string
+-habitaciones int
+-color string
++hosepdar(user:user)
++dejar
+}
+class Ventana{
+-disegno string
+-dimensiones string
+-color string
+-material string
+}
+
+Edificio "1" o-- "1..*" Departamento
+Departamento  "1"*--> "1..*"Puerta
+Departamento "1"*--> "1..*" Techo
+Departamento "1"*--> "0..*" Ventana
+
+@enduml
