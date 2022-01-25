@@ -1,0 +1,139 @@
+@staruml
+abstract MedioDeTransporte{
+-capacidad int
+-marca string
+-dimensiones string
+-material string
++encender()
++apagar()
++avanzar()
++acelerar()
++detener()
+}
+class Vehiculo extends MedioDeTransporte{
+-capacidad int
+-marca string
+-dimensiones string
+-material string
++encender()
++apagar()
++avanzar()
++acelerar()
++detener()
+}
+class Terrestre extends Vehiculo{
+-dimensiones string
+-peso string
+-capacidad int
+-velocidad float
+-aceleracion float
+-marca string
+-material string
++encender()
++apagar()
++avanzar()
++acelerar()
++detener()
+}
+class Aereo extends Vehiculo{
+-dimensiones string
+-peso string
+-capacidad int
+-velocidad float
+-aceleracion float
+-marca string
+-material string
++encender()
++apagar()
++despegar()
++aterrizar()
++avanzar()
++acelerar()
++detener()
+}
+class Piloto{
+-sexo boolean
+-nombre string
+-edad int
+-licencia boolean
++conducir()
++dejarDeConducir()
+}
+Vehiculo "*"<-- "1..*" Piloto : conduce un 
+class Avion extends Aereo{
+-dimensiones string
+-peso string
+-capacidad int
+-velocidad float
+-aceleracion float
+-marca string
+-material string
++encender()
++apagar()
++despegar()
++aterrizar()
++avanzar()
++acelerar()
++detener()
++modificarLatitud(coordinates:float)
++modificarLongitud(coordinates:float)
+
+}
+class Helicoptero extends Aereo{
+-dimensiones string
+-peso string
+-capacidad int
+-velocidad float
+-aceleracion float
+-marca string
+-material string
++encender()
++apagar()
++despegar()
++aterrizar()
++avanzar()
++acelerar()
++detener()
++cambiarAlaDelta(veveveve)
++modificarLatitud(coordinates:float)
++modificarLongitud(coordinates:float)
+}
+class Moto extends Terrestre{
+-color string
+-marca string
+-modelo string
+-placa int
+-velocidad float
+-aceleracion float
++encender()
++apagar()
++acelerar()
++detener()
++avanzar()
+}
+class Caballo extends Terrestre{
+-color string
+-tamagno string
+-peso float
+-edad int
+-raza string
++relinchar()
++trotar()
++detener()
++correr()
+}
+class Lancha extends Terrestre{
+-color string
+-marca string
+-modelo string
+-placa int
+-agno int
+-velocidad float
+-aceleracion float
++encender()
++apagar()
++acelerar()
++avanzar()
++cambiarDireccion()
+}
+@enduml
