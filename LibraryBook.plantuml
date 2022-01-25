@@ -1,0 +1,41 @@
+@startuml
+
+class Estudiante{
+-nombre string
+-edad int
+-semestre int
+-matricula int
++ leer(book:book)
++ buscarLibro(book:book)
++ copiarLibro(book:book)
+}
+class Libreria{
+-libros int
+-revistas int
++venderLibro(book:book)
++mostrarLibro(book:book)
+}
+class Revista{
+-tema string
+-volumen string
+-edicion string
+-autor string
++abrir()
++cerrar()
++consultarDatos()
+}
+class Libro{
+-tema string
+-volumen string
+-edicion string
+-autor string
++abrir()
++cerrar()
++consultarDatos()
+}
+
+Estudiante "0..*"  --> "0..*" Libreria
+Libreria "0..*" o-- "0..*" Libro
+Libreria "0..*" o-- "0..*" Revista
+ 
+@enduml
