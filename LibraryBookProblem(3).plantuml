@@ -1,0 +1,46 @@
+@startuml
+class Duegno{
+-nombre string
+-credenciales string
++identificarse(nombre: string, contra: string)
++consultarCatalogo()
+
+}
+class Libreria{
+-capacidad int
+-secciones string
++venderPub(libro : libro | revista: revista)
++almacenarLibro(libro: libro)
++almacenarRevista(revista: revista)
+}
+Libreria "1..*" -- "1" Duegno :tiene una
+class Publicaciones{
+-editorial string
+-precio float
+-fechaDePublicacion string
++mostrarEditorial()
++mostrarFecha()
+}
+class Revistas extends Publicaciones{
+-nombre string
+-numeroEjemplaresCirculacion int
+-periodicidadDePublicacion string
++actualizarDatosRevista()
+}
+class Libros extends Publicaciones{
+-codigoISBN int
+-nombreAutor string
+-titulo string
++actualizarDatosLibro()
+}
+class Catalogo{
+-numeroDeEditoriales
+-NumeroDeRevistas
+-numeroDeLibros
++mostrarPorEditorial()
++mostrarPublicaciones()
++buscarPublicacion(ISBN: int, nombre: string)
+}
+Libreria *-- "0..*" Publicaciones 
+Libreria o--  Catalogo: tiene un
+@enduml
